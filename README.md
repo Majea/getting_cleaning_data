@@ -1,6 +1,8 @@
 getting_cleaning_data
 =====================
 
+Purpose of the project
+----------------------
 project for the coursera course "getting and cleaning data"
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected. 
@@ -21,9 +23,19 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+Project content
+---------------
+
 The project contains the following items:
 - run_analysis.R: The script that creates the tidy data set
 - CodeBook.md: the list of the different steps taken to fetch the original data and generate the tidy data set
 - README.md: this file. Explains what this project is all about and what it contains.
 - dataset_and_attributes_info.md: some description of the data set and the attributes, taken from the original web site (archive.ics.uci.edu).
 
+How to produce the tidy data set
+--------------------------------
+1. Clone the project on your computer. 
+2. Open a R console or in RStudio. 
+3. Set its working directory to the root of the project. 
+4. execute the *run_analysis.R* script using *source("run_analysis.R")* command
+5. the result data set is in the *dataset_tidy variable*. It is also avaiable in the *dataset_tidy.txt* file.
