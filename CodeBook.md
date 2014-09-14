@@ -13,31 +13,31 @@ This document contains information regarding the logic related to the data proce
 
 Result variables
 ----------------
-- dataset_tidy: this is the final result of the processing. It's a tidy data set compliant with the description provided in README.md.
+- *dataset_tidy*: this is the final result of the processing. It's a tidy data set compliant with the description provided in README.md.
 
-The variable "dataset_tidy" is saved on disk in the file "dataset_tidy.txt". it can be reloaded using the read.table function.
+The variable *dataset_tidy* is saved on disk in the file "*dataset_tidy.txt*". it can be reloaded using the read.table function.
 
 Intermediate variables
 ----------------------
 The following variables are created during the processing, though they are not part of the final result. They are removed from the workspace at the end of the script. Users can just comment the last "remove" instruction at the end of the script to make the variables visible.
 - *dataUri*: the URI to use to download the data set
-- dataFileName: the name of the data set on the local disk after it was downloaded. It's a zip file.
-- X_test: the features data for the testing set 
-- X_train: the features data for the training set
-- featureNames: a 2 column table mapping an index (column 1) with a name (column 2). Column 1 refers to the index of a column in the X_test or X_train variable. Column 2 provides the name of the corresponding column in X_test or X_train.
-- subject_test: the subjects of the observation for the test set. There are 30 possible subjects. Each subject row matches the row with the same index in the features data set.
-- subject_train: the subjects of the observation for the training set. 
-- y_test: the activity that the subject was performing while the observation was taken. There are 6 possible activities. Each y_test row matches the row with the same index in the test features data set.
-- y_train: the activity that the subject was performing while the observation was taken. There are 6 possible activities. Each y_test row matches the row with the same index in the training features data set.
-- activityLabels: provides a name for the different activities. y_train and y_test contains integers whose matching activity name can be found in this activityLabels variable. The first column contains the integer used in y_train and y_test while the second column contains the corresponding activity name. 
-- full_test: the complete testing set. It includes the subjects, the activities and all the features for the test set.
-- full_train: the complete training set. It includes the subjects, the activities and all the features for the training set.
-- merged: the complete data set. It includes the subjects, the activities and all the features for both the training and the testing sets.
-- colsBase: temporary variable
-- cols: a boolean vector indicating whether we have to keep a specific column in "merged" variable for building the tidy data set. 
-- dataset_data: the data set with only the columns listed by cols variable. It contains the activities, the subjects and all features related to means and standard deviation. Please see the steps description below for more details.
-- filteredFeatureNames: the names of the columns in "dataset_data".
-- i: a temporary variable used a counter in "for" loop.
+- *dataFileName*: the name of the data set on the local disk after it was downloaded. It's a zip file.
+- *X_test*: the features data for the testing set 
+- *X_train*: the features data for the training set
+- *featureNames*: a 2 column table mapping an index (column 1) with a name (column 2). Column 1 refers to the index of a column in the X_test or X_train variable. Column 2 provides the name of the corresponding column in X_test or X_train.
+- *subject_test*: the subjects of the observation for the test set. There are 30 possible subjects. Each subject row matches the row with the same index in the features data set.
+- *subject_train*: the subjects of the observation for the training set. 
+- *y_test*: the activity that the subject was performing while the observation was taken. There are 6 possible activities. Each y_test row matches the row with the same index in the test features data set.
+- *y_train*: the activity that the subject was performing while the observation was taken. There are 6 possible activities. Each y_test row matches the row with the same index in the training features data set.
+- *activityLabels*: provides a name for the different activities. y_train and y_test contains integers whose matching activity name can be found in this activityLabels variable. The first column contains the integer used in y_train and y_test while the second column contains the corresponding activity name. 
+- *full_test*: the complete testing set. It includes the subjects, the activities and all the features for the test set.
+- *full_train*: the complete training set. It includes the subjects, the activities and all the features for the training set.
+- *merged*: the complete data set. It includes the subjects, the activities and all the features for both the training and the testing sets.
+- *colsBase*: temporary variable
+- *cols*: a boolean vector indicating whether we have to keep a specific column in "merged" variable for building the tidy data set. 
+- *dataset_data*: the data set with only the columns listed by cols variable. It contains the activities, the subjects and all features related to means and standard deviation. Please see the steps description below for more details.
+- *filteredFeatureNames*: the names of the columns in "dataset_data".
+- *i*: a temporary variable used a counter in "for" loop.
 
 
 Processing steps
