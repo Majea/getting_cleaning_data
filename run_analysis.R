@@ -146,7 +146,7 @@ dataset_tidy <- ddply(dataset_data, c("subjects", "activities"), function(data){
 }
 
 # we have the result of the project: dataset_tidy. Let's save it in a file called "dataset_tidy.txt"
-write.table(dataset_data, file="dataset_tidy.txt", row.names=FALSE)
+write.table(dataset_tidy, file="dataset_tidy.txt", row.names=FALSE)
 
 ### cleanup code: remove all variables that are not the result of this project. In other words, only keep dataset_data and dataset_tidy
 remove(X_test, X_train, activityLabels, featureNames, full_test, full_train, merged, subject_test, subject_train, y_test, y_train, dataset_data,
