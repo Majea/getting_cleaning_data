@@ -6,6 +6,9 @@
 ### data set. The justification of the different steps is also described in the CodeBook.md. 
 ### The steps listed in this script refer to the same steps listed in the CodeBook.md file.
 ###
+### There are blocks of code at different places in the script that start with the following comment: "assertions check". These blocks are there for
+### debugging and to verify some assertions. These blocks are not doing any processing and can be removed safely.
+###
 
 library(plyr)
 
