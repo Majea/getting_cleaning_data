@@ -20,7 +20,7 @@ The variable "dataset_tidy" is saved on disk in the file "dataset_tidy.txt". it 
 Intermediate variables
 ----------------------
 The following variables are created during the processing, though they are not part of the final result. They are removed from the workspace at the end of the script. Users can just comment the last "remove" instruction at the end of the script to make the variables visible.
-- dataUri: the URI to use to download the data set
+- *dataUri*: the URI to use to download the data set
 - dataFileName: the name of the data set on the local disk after it was downloaded. It's a zip file.
 - X_test: the features data for the testing set 
 - X_train: the features data for the training set
