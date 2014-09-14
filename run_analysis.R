@@ -125,8 +125,6 @@ filteredFeatureNames <- c("subjects", filteredFeatureNames, "activities")
 # assign the column names to the data set
 colnames(dataset_data) <- filteredFeatureNames
 
-# we have the first result of the project: dataset_data. Let's save it in a file called "dataset_data.txt"
-write.table(dataset_data, file="dataset_data.txt", row.names=FALSE)
 
 # step 8: From the data set "dataset_data", creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 # ===========================================================================================================================================================
@@ -147,6 +145,8 @@ dataset_tidy <- ddply(dataset_data, c("subjects", "activities"), function(data){
     if (ncol(dataset_tidy)!=ncol(dataset_data)) stop("wrong number of columns in tidy data set")
 }
 
+# we have the result of the project: dataset_tidy. Let's save it in a file called "dataset_tidy.txt"
+write.table(dataset_data, file="dataset_tidy.txt", row.names=FALSE)
 
 ### cleanup code: remove all variables that are not the result of this project. In other words, only keep dataset_data and dataset_tidy
 remove(X_test, X_train, activityLabels, featureNames, full_test, full_train, merged, subject_test, subject_train, y_test, y_train, 
